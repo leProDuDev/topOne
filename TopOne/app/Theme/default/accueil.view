@@ -7,7 +7,7 @@
 </head>
 <body>
 	<?= getTheme('/include/contain', true, 'view'); ?>
-	<nav class="navbar navbar-expand-lg navbar-dark navbar-color navnar-line">
+	<nav class="navbar navbar-expand-lg navbar-dark navbar-color sub-line">
 
       	<a class="navbar-brand d-lg-none up" href="#">Navbar</a>
     
@@ -22,7 +22,7 @@
             <a class="nav-link active up" href="#">ACCUEIL <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link up" href="#">QUI-SOMME NOUS ?</a>
+            <a class="nav-link up" href="#">NOS ACTIONS</a>
           </li>
           <li class="nav-item">
             <a class="nav-link up" href="#">NOS CONVICTION</a>
@@ -48,6 +48,38 @@
         
       </div>
     </nav>
+    
+    <div class="bg-first sub-line">
+    
+    		<div class="bg-content">
+    		
+        		<h2 class="up text-center bg-title">Bienvenue sur ECOWORLD</h2>
+        		<h2 class="up text-center bg-title">Tous unis pour l'avenir de demain</h2>
+    		
+    		</div>
+    
+    </div>
+    
+    <div class="container">
+    
+    	<div class="row">
+    	
+    		<div class="col-8">
+    		
+    			aaa	
+    		
+    		
+    		</div>
+    		
+    		<div class="col-4">
+    		
+    			aaa
+    		
+    		</div>
+    	
+    	</div>
+    
+    </div>
 	
 </body>
 </html>

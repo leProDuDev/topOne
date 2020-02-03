@@ -10,8 +10,30 @@
 	
 }
 
-.navnar-line {
+.sub-line {
 	
 	border-bottom: 5px solid #219186;
+	
+}
+
+.bg-first {
+	
+	background: url(../img/bg-4.jpg);
+	background-position: center;
+	
+}
+
+.bg-content {
+	
+	color: #1c7d73;
+	text-shadow: 0.1em 0.1em #333;
+	padding-top: 8%;
+	padding-bottom: 10%;
+	
+}
+
+.bg-title {
+	
+	font-size: 3rem;
 	
 }
