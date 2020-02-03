@@ -27,7 +27,7 @@
 	
 	color: #1c7d73;
 	text-shadow: 0.1em 0.1em #333;
-	padding-top: 8%;
+	padding-top: 6%;
 	padding-bottom: 10%;
 	
 }
@@ -35,5 +35,32 @@
 .bg-title {
 	
 	font-size: 3rem;
+	
+}
+
+.box {
+	
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+	
+}
+
+.spacer-1 {
+	
+	margin-top: 10px;
+	
+}
+
+.sub-box {
+	
+	margin-left: 10px;
 	
 }

@@ -55,6 +55,8 @@
     		
         		<h2 class="up text-center bg-title">Bienvenue sur ECOWORLD</h2>
         		<h2 class="up text-center bg-title">Tous unis pour l'avenir de demain</h2>
+        		
+        		
     		
     		</div>
     
@@ -62,18 +64,24 @@
     
     <div class="container">
     
+    	<div class="spacer-1"></div>
+    
     	<div class="row">
     	
-    		<div class="col-8">
+    		<div class="col-7 box">
     		
     			aaa	
     		
     		
     		</div>
     		
-    		<div class="col-4">
+    		<div class="col-4 box sub-box">
     		
-    			aaa
+    			<div class="card-body">
+                   
+                   
+                   
+                </div>
     		
     		</div>
     	
