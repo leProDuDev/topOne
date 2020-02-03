@@ -91,7 +91,19 @@
     			</div>
     		
     	</div>
+    	
+    	<div class="spacer-1"></div>
     
+    </div>
+    
+    <div class="footer">
+    	
+    	<div class="footer-content text-center up">
+    	
+    		&copy; Copyright 2020, EcoWorld
+    	
+    	</div>
+    	
     </div>
 	
 </body>
