@@ -1,11 +1,11 @@
 <?php
 
-//Include
+// Include
 require '../libs/LeftingDev/start-class.php';
 
-//Start Engine
+// Start Engine
 $LeftingDev = new LeftingDev();
-$LeftingDev->start("../app/Page/","../app/Theme/default", "/accueil");
+$LeftingDev->start("../app/Page/", "../app/Theme/default", "/accueil");
 $LeftingDev->EmulatePage();
 
 ?>
