@@ -1,4 +1,4 @@
-.navbar-color {
+.color {
 	
 	background-color: #2bbbad !important;
 	
@@ -25,7 +25,7 @@
 
 .bg-content {
 	
-	color: #1c7d73;
+	color: white;
 	text-shadow: 0.1em 0.1em #333;
 	padding-top: 6%;
 	padding-bottom: 10%;
@@ -40,6 +40,8 @@
 
 .box {
 	
+	margin-left: auto;
+    margin-right: auto;
 	position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -50,12 +52,13 @@
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
 	
 }
 
 .spacer-1 {
 	
-	margin-top: 10px;
+	margin-top: 20px;
 	
 }
 

@@ -7,7 +7,7 @@
 </head>
 <body>
 	<?= getTheme('/include/contain', true, 'view'); ?>
-	<nav class="navbar navbar-expand-lg navbar-dark navbar-color sub-line">
+	<nav class="navbar navbar-expand-lg navbar-dark color sub-line">
 
       	<a class="navbar-brand d-lg-none up" href="#">Navbar</a>
     
@@ -66,25 +66,30 @@
     
     	<div class="spacer-1"></div>
     
-    	<div class="row">
-    	
-    		<div class="col-7 box">
-    		
-    			aaa	
-    		
-    		
-    		</div>
-    		
-    		<div class="col-4 box sub-box">
+    	<div class="col-10 box">
     		
     			<div class="card-body">
-                   
-                   
-                   
-                </div>
+    			
+    				<h5>Newsletter #1</h5>
+    				
+    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
+    			
+    			</div>
     		
-    		</div>
+    	</div>
     	
+    	<div class="spacer-1"></div>
+    
+    	<div class="col-10 box">
+    		
+    			<div class="card-body">
+    			
+    				<h5>Newsletter #2</h5>
+    				
+    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
+    			
+    			</div>
+    		
     	</div>
     
     </div>
