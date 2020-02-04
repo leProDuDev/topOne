@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>EcoWorld - Faite un dons</title>
+	<?= getTheme('/include/dependency', true, 'view'); ?>
+	
+</head>
+
+<body>
+
+	<?= getTheme('/include/navbar', true, 'view'); ?>
+    
+    <div class="bg-first sub-line">
+
+		<div class="bg-content-small">
+
+			<h2 class="up text-center bg-title">sensibilisation</h2>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+
+		<div class="col-10 mx-auto center-login">
+
+			<div style="padding-top: 3%; padding-bottom: 5%;">
+
+				<div class="card text-center">
+
+					<div class="card-body">
+
+						<p>
+						
+							Malgré les contestations écologiques, l'industrie du plastique est toujours installée dans une croissance régulière. En dix ans, la production mondiale de plastiques est passée de 245 millions de tonnes à 348 millions de tonnes (en 2017), selon la fédération européenne PlasticsEurope. La croissance a été de 3,9% en 2017. "Est-ce que ça va se poursuivre dans les années à venir ? On peut supposer que oui", estime auprès de l'AFP Hervé Millet, directeur des affaires techniques et réglementaires de PlasticsEurope. "Les raisons qui expliquent la croissance des plastiques dans le monde, a priori ne vont pas d'un seul coup disparaître".
+						
+						</p>
+						
+						<h2>Des utilisations de plus en plus variés</h2>
+						
+						<p>
+						
+							"Il y a un moteur fort dans les pays en développement qui est lié à la consommation" avec une demande de polymères pour l'emballage et le conditionnement, observe aussi Pierre Gadrat, directeur chimie et matériaux au cabinet Alcimed. "A l'autre bout de la chaîne, il y a le développement de polymères techniques. C'est toujours aussi dynamique, voire plus qu'avant", ajoute-t-il. La production de nouveaux polymères répond à des applications dans le secteur automobile et le médical. Certaines résines sont utilisées pour l'automobile et l'aéronautique, mais aussi pour des produits de consommation de niche comme les chaussures de sport.
+						
+						</p>
+						
+						<h2>Des initiatives se développent...</h2>
+						
+						<p>
+						
+							En France, la vaisselle jetable en plastique devrait disparaître en 2020, si elle n'est pas biodégradable. Les sacs plastiques fins non compostables sont déjà interdits. De jeunes ingénieurs et designers travaillent également sur l'élaboration d'un bateau, Plastic Odyssey, capable de recycler les déchets plastiques marins en objets ou en carburant pour assurer sa propre autonomie.
+
+							Ailleurs dans le monde, la ville américaine de Seattle vient d'interdire les couverts et pailles en plastique dans ses restaurants et cafés, tout comme la marque Starbucks. Et des mesures similaires se multiplient dans le monde, sur fond d'images d'océans étouffant sous le plastique. "Aujourd'hui, ça ne pèse pas de façon massive", remarque Emmanuel Guichard, délégué général de la fédération française de l'emballage plastique. Mais "à un moment, on ne peut pas imaginer qu'il n'y ait pas un impact" de toutes ces mesures. "Le déchet plastique devient de moins en moins un déchet, mais une matière première valorisable", remarque Pierre Gadrat, qui voit dans le recyclage, encore faible, un "des enjeux clés pour demain".
+						
+						</p>
+						
+						<h2>... jusque dans le milieu artistique</h2>
+						
+						<p>
+							
+							Depuis début mai et jusqu'au 16 septembre 2018, les triennales de Bruges proposent des constructions impressionnantes d'artistes et d'architectes contemporains, exposées dans le centre historique de la ville. La star de cette édition 2018 : une baleine de 12 mètres qui émerge d'un canal.
+							Cette gigantesque sculpture est réalisée à partir de déchets provenant du Pacifique. L'agence d'architectes et de designers StudioKCA a écumé les plages de Hawaï pour collecter les déchets, avec l'aide de bénévoles du Hawaii Wildlife Fund et de la Surfrider Foundation. La conception de cette oeuvre a permis de récupérer plus de cinq tonnes de plastiques.
+							
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+    
+    <?= getTheme('/include/footer', true, 'view'); ?>
+	
+</body>
+
+</html>
