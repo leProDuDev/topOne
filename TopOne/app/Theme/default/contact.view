@@ -1,3 +1,9 @@
+<?php 
+
+	$SettingsManager = new SettingsManager(new SqlManager());
+	$access = $SettingsManager->getAllSettings()[0];
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -43,23 +49,23 @@
 
 									<center><div class="md-form" style="width: 80%">
 									
-										<input type="text" id="form1" class="form-control"> <label
+										<input type="text" id="form1" name="email" class="form-control"> <label
 											for="form1">Email</label>
 											
 									</div>
 
 									<div class="md-form" style="width: 80%">
 									
-										<textarea id="textarea-char-counter"
+										<textarea name="message" id="textarea-char-counter"
 											class="form-control md-textarea" length="120" rows="3"></textarea>
 										<label for="textarea-char-counter">Message</label>
 										
 									</div>
 
 
-									<a href="#"
+									<button type="submit"
 										class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Envoyez
-										le message</a>
+										le message</button>
 
 								</div></center>
 
@@ -76,7 +82,7 @@
 					<div class="mapouter">
 						<div class="gmap_canvas">
 							<iframe width="541" height="468" id="gmap_canvas"
-								src="https://maps.google.com/maps?q=university%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed"
+								src="https://maps.google.com/maps?q=<?php echo $access['street']; ?>&t=&z=13&ie=UTF8&iwloc=&output=embed"
 								frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 							<a href="https://www.embedgooglemap.org">embedgooglemap.org</a>
 						</div>

@@ -4,4 +4,82 @@
  * Script Executed
  */
 
+if(!empty($_SESSION["id"])) {
+	
+	header('Location: /dash/index');
+	
+}
+
+
+if(!empty($_POST)) {
+	
+	if(!empty($_POST["username"])
+			&& !empty($_POST["password"])) {
+				
+				$UserManager = new UserManager(new SqlManager());
+				$connect = $UserManager->checkLogin(htmlentities($_POST["username"]), $_POST["password"]);
+				
+				if(!empty($connect)) {
+					
+					$_SESSION["username"] = htmlentities($connect["username"]);
+					$_SESSION["id"] = htmlentities($connect["id"]);
+					
+					success();
+					
+					header('Refresh: 3; URL=/dash/index');
+					
+				} else {
+					
+					error();
+					
+				}
+				
+			} else {
+				
+				error();
+				
+			}
+			
+}
+
+function error() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Les identifants entré sont incorrect !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Merci, nous vous redirigeons...'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
 ?>

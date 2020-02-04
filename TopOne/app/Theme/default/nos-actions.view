@@ -27,78 +27,39 @@
 		<div class="mx-auto" style="margin-top: 5%;">
 		
 			<div class="row">
-      
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-3.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Lutter contre les déchets plastique.
-                	
-                	</div>
-                	
-                </div>
-                
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-2.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Lutter contre le réchauffement climatique.
-                	
-                	</div>
-                	
-                </div>
-                
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-1.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Protéger les forêts.
-                	
-                	</div>
-                
-                </div>
-                
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-4.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Lutter contre le gaspillage alimentaire.
-                	
-                	</div>
-                	
-                </div>
-                
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-5.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Lutter contre le braconnage.
-                	
-                	</div>
-                	
-                </div>
-                
-                <div class="center-box card">
-                
-                	<div class="img-box" style="background: url('../img/card/card-6.jpg');"></div>
-                
-                	<div class="card-body text-center up">
-                	
-                		Lutter contre la pollution.
-                	
-                	</div>
-                
-                </div>
+			
+			<?php 
+				  
+				$ActionsManager = new ActionsManager(new SqlManager());
+				$access = $ActionsManager->getAllActions();
+				  
+				  if(!empty($access)) {
+				  	
+				  	foreach ($access as $data) {
+				  		
+				  		?>
+    
+					    	<div class="center-box card">
+					    	
+					    	<div class="img-box" style="background: url('<?php echo $data["image"]; ?>');"></div>
+					    		
+					    		<div class="card-body text-center up">
+					    				
+					    			<?php echo $data["message"]; ?>
+					    			
+					    		</div>
+					    		
+					    	</div>
+									  		
+				  		<?php
+				  		
+				  		
+				  		
+				  	}
+				  	
+				  }
+				  
+			?>
         
       		</div>
 		

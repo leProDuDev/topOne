@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard Home</title>
+		<?= getTheme('/include/dash/dependency', true, 'view'); ?>
+	</head>
+	<body>
+	
+		<?= getTheme('/include/dash/navbar', true, 'view'); ?>
+		
+		<div class="page-content p-5">
+		
+			<div class="card mb-space-1">
+
+			  <div class="card-body">
+			
+				<h4 class="card-title">Dashboard - Home</h4>
+			    <p class="card-text">/ <i class="fas fa-home text-primary fa-fw"></i> / dash / index</p>
+			
+			  </div>
+			
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-lg-6">
+			
+					<div class="card">
+	
+					  <div class="card-body">
+					
+						<h4 class="card-title">Serveur Information:</h4>
+						<ul>
+						
+							<li><?php echo $_SERVER["SERVER_SOFTWARE"];?></li>
+							<li><?php echo $_SERVER["SERVER_NAME"];?></li>
+							<li><?php echo $_SERVER["SERVER_ADMIN"];?></li>
+						
+						</ul>
+					
+					  </div>
+				
+					</div>
+				
+				</div>
+				
+				<div class="col-lg-6">
+			
+					<div class="card">
+	
+					  <div class="card-body">
+					
+						<h4 class="card-title">Information:</h4>
+						<ul>
+						
+							<li>Dash v1.3</li>
+							<li>PHP / MYSQL</li>
+							<li>By Yanis Bounadja</li>
+						
+						</ul>
+					
+					  </div>
+				
+					</div>
+				
+				</div>
+			
+			</div>
+			
+			<div class="mb-empty"></div>
+			
+			<?= getTheme('/include/dash/footer', true, 'view'); ?>
+		
+		</div>
+		
+	</body>
+</html>

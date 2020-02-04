@@ -1,3 +1,9 @@
+<?php 
+
+$SettingsManager = new SettingsManager(new SqlManager());
+$access = $SettingsManager->getAllSettings()[0];
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -16,8 +22,7 @@
     
     		<div class="bg-content">
     		
-        		<h2 class="up text-center bg-title">Bienvenue sur ÈCOWORLD</h2>
-        		<h2 class="up text-center bg-title">Tous unis pour l'avenir de demain</h2>
+        		<h2 class="up text-center bg-title"><?php echo $access['title']; ?></h2>
 
     		</div>
     
@@ -25,33 +30,40 @@
     
     <div class="container">
     
-    	<div class="spacer-1"></div>
+     <?php 
+				  
+				  $NewsletterManager = new NewsletterManager(new SqlManager());
+				  $access = $NewsletterManager->getAllNews();
+				  
+				  if(!empty($access)) {
+				  	
+				  	foreach ($access as $data) {
+				  		
+				  		?>
+				  		
+				  		<div class="spacer-1"></div>
     
-    	<div class="col-10 box">
-    		
-    		<div class="card-body">
-    			
-    			<h5>Newsletter #1</h5>
-    				
-    			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
-    			
-    		</div>
-    		
-    	</div>
-    	
-    	<div class="spacer-1"></div>
-    
-    	<div class="col-10 box">
-    		
-    		<div class="card-body">
-    			
-    			<h5>Newsletter #2</h5>
-    				
-    			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
-    			
-    		</div>
-    		
-    	</div>
+					    	<div class="col-10 box">
+					    		
+					    		<div class="card-body">
+					    			
+					    			<h5><?php echo $data["title"]; ?></h5>
+					    				
+					    			<p><?php echo $data["message"]; ?></p>
+					    			
+					    		</div>
+					    		
+					    	</div>
+									  		
+				  		<?php
+				  		
+				  		
+				  		
+				  	}
+				  	
+				  }
+				  
+	?>
     	
     	<div class="spacer-1"></div>
     

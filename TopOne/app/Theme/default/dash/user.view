@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard User</title>
+		<?= getTheme('/include/dash/dependency', true, 'view'); ?>
+	</head>
+	<body>
+	
+		<?= getTheme('/include/dash/navbar', true, 'view'); ?>
+		
+		<div class="page-content p-5">
+		
+			<div class="card mb-space-1">
+
+			  <div class="card-body">
+			
+				<h4 class="card-title">Dashboard - User</h4>
+			    <p class="card-text">/ <i class="fas fa-home text-primary fa-fw"></i> / dash / user</p>
+			
+			  </div>
+			
+			</div>
+			
+			<div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUserLabel" aria-hidden="true">
+			  
+				  <div class="modal-dialog" role="document">
+				  
+				    <div class="modal-content">
+				    
+				      <div class="modal-header">
+				      
+				        <h5 class="modal-title" id="addUserLabel">Ajouté un utilisateur</h5>
+				        
+				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				        
+				          <span aria-hidden="true">&times;</span>
+				          
+				        </button>
+				        
+				      </div>
+				      
+				      <form method="POST">
+				      
+				      	<div class="modal-body">
+				        
+				        	<input type="text" name="username" class="form-control mb-4" placeholder="Pseudo">
+			    			<input type="password" name="password" class="form-control mb-4" placeholder="Mot de passe">
+			    			<input type="hidden" name="type" value="add">
+				        
+				     	</div>
+				      
+				      	<div class="modal-footer">
+				      	
+				        	<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+				        	<button type="submit" class="btn btn-primary">Créer</button>
+				        	
+				      	</div>
+				      
+				      </form>
+				      
+				    </div>
+				    
+				  </div>
+				  
+			</div>
+			
+			<div class="card mb-space-1">
+
+			  <div class="card-body">
+			
+				<table class="table">
+				
+				  <thead>
+				  
+				    <tr>
+				    
+				      <th scope="col">#</th>
+				      <th scope="col">Nom</th>
+				      <th scope="col">Mot de passe</th>
+				      <th scope="col"><a class="btn peach-gradient btn-sm" data-toggle="modal" data-target="#addUser">Ajouté-----</a></th>
+				      
+				    </tr>
+				    
+				  </thead>
+				  
+				  <tbody>
+				  
+				  <?php 
+				  
+				  $UserManager = new UserManager(new SqlManager());
+				  $access = $UserManager->getAllLogin();
+				  
+				  if(!empty($access)) {
+				  	
+				  	foreach ($access as $data) {
+				  		
+				  		echo "<tr>
+				      			<th scope=\"row\">".$data["id"]."</th>
+				      			<td>".$data["username"]."</td>
+				      			<td>".$data["password"]."</td>
+								
+								<td><form method=\"POST\">
+
+									<input type=\"hidden\" name=\"type\" value=\"remove\">
+									<input type=\"hidden\" name=\"id\" value=\"".$data["id"]."\">
+								    <input type=\"hidden\" name=\"username\" value=\"".$data["username"]."\">
+
+									<button type=\"submit\" class=\"btn blue-gradient btn-sm\">Supprimer</button>
+
+								</form></td>
+								
+				    		</tr>";
+				  		
+				  	}
+				  	
+				  }
+				  
+				  ?>
+				  
+				  </tbody>
+				  
+				</table>
+			
+			  </div>
+			
+			</div>
+			
+			<div class="mb-empty"></div>
+			
+			<?= getTheme('/include/dash/footer', true, 'view'); ?>
+		
+		</div>
+		
+		
+		
+	</body>
+</html>

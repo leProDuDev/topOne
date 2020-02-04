@@ -1,0 +1,139 @@
+<?php
+
+if(!empty($_POST)) {
+	
+	$UserManager = new UserManager(new SqlManager());
+	
+	if($_POST["type"] == "add") {
+		
+		if(empty($UserManager->existUser(htmlentities($_POST["username"])))) {
+			
+			$connect = $UserManager->registerUser(htmlentities($_POST["username"]), htmlentities($_POST["password"]));
+			
+			if(!empty($connect)) {
+				
+				success_add();
+				echo '<meta http-equiv="refresh" content="3">';
+				
+			} else {
+				
+				error_add();
+				
+			}
+			
+		} else {
+			
+			error_add();
+			
+		}
+		
+	}
+	
+	if($_POST["type"] == "remove") {
+		
+		if(!empty($UserManager->existUser(htmlentities($_POST["username"])))) {
+			
+			$connect = $UserManager->removeUser(htmlentities($_POST["id"]));
+			
+			if($connect) {
+				
+				success_remove();
+				echo '<meta http-equiv="refresh" content="3">';
+				
+			} else {
+				
+				error_remove();
+				
+			}
+			
+		} else {
+			
+			error_remove();
+			
+		}
+		
+	}
+	
+}
+
+function error_remove() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Impossible de supprimer ce compte !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function error_add() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Les identifants entré sont incomplet ou existant !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_add() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Utilisateur créer !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_remove() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Utilisateur supprimer !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+?>

@@ -1,3 +1,9 @@
+<?php 
+
+	$SettingsManager = new SettingsManager(new SqlManager());
+	$access = $SettingsManager->getAllSettings()[0];
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -26,7 +32,13 @@
 
 		<div class="col-8 mx-auto center-login">
 
-			<form method="POST" style="padding-top: 20%; padding-bottom: 5%;">
+			<form method="POST" action='https://www.paypal.com/cgi-bin/webscr' style="padding-top: 20%; padding-bottom: 5%;">
+			<input type='hidden' name='cmd' value='_xclick'>
+			<input type='hidden' name='business' value="<?php echo $access['email_paypal']; ?>">
+			<input type='hidden' name='item_name' value='Don'>
+			<input type='hidden' name='no_note' value='1'>
+			<input type='hidden' name='currency_code' value='EUR'>
+			<input type='hidden' name='tax' value='0'>
 
 				<div class="card text-center">
 
@@ -38,14 +50,14 @@
 
 								<p style="font-size: x-large; text-transform: uppercase;">Montant
 									du don <br> en EUROS</p>
-								<input type="number" class="form-control" value="5"
+								<input type="number" name="amount" class="form-control" value="5"
 									style="width: 30%">
 
 							</center>
 
-							<a href="#"
+							<button type="submit"
 								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Effectuer
-								le don</a>
+								le don</button>
 
 						</div>
 
@@ -59,7 +71,7 @@
 			
 				<div class="card-body">
 
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt enim vel dolor egestas, eget scelerisque neque eleifend. Aenean in ante quam. Donec luctus pretium ante ut malesuada.
+					<?php echo $access['message_paypal']; ?>
 				
 				</div>
 			

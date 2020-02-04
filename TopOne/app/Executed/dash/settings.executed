@@ -1,0 +1,90 @@
+<?php
+
+if(!empty($_POST)) {
+	
+	$SettingsManager = new SettingsManager(new SqlManager());
+	
+	if(empty($_POST["paypal_email"]) && empty($_POST["paypal_message"]) 
+			&& empty($_POST["email"]) && empty($_POST["street"]) && empty($_POST["title"])) {
+		
+		return;
+		
+	}
+	
+	$connect = $SettingsManager->updateAll(htmlentities($_POST["paypal_email"]), htmlentities($_POST["paypal_message"]),
+			htmlentities($_POST["email"]), htmlentities($_POST["street"]), $_POST["title"]);
+	
+	if(!empty($connect)) {
+		
+		success_add();
+		echo '<meta http-equiv="refresh" content="3">';
+		
+	} else {
+		
+		error_add();
+		
+	}
+	
+}
+
+function error_add() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Impossible mettre à jour les Paramètres'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_add() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'MISE A JOUR des Paramètres'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_remove() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Actions supprimer !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+?>

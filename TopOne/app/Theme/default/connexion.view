@@ -40,18 +40,18 @@
 								
 								<div class="spacer-1"></div>
 
-								<input type="text" class="form-control" placeholder="Pseudo"
+								<input type="text" name="username" class="form-control" placeholder="Pseudo"
 									style="width: 50%">
 									
-								<input type="password" class="form-control" placeholder="Mot de passe"
+								<input type="password" name="password" class="form-control" placeholder="Mot de passe"
 									style="width: 50%">
 									
 								<div class="spacer-1"></div>
 
 							</center>
 
-							<a href="#"
-								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light up">connexion</a>
+							<button type="submit"
+								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light up">connexion</button>
 
 						</div>
 

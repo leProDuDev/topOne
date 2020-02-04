@@ -1,0 +1,91 @@
+<?php 
+
+	$SettingsManager = new SettingsManager(new SqlManager());
+	$access = $SettingsManager->getAllSettings()[0];
+
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dashboard Settings</title>
+		<?= getTheme('/include/dash/dependency', true, 'view'); ?>
+	</head>
+	<body>
+	
+		<?= getTheme('/include/dash/navbar', true, 'view'); ?>
+		
+		<div class="page-content p-5">
+		
+			<div class="card mb-space-1">
+
+			  <div class="card-body">
+			
+				<h4 class="card-title">Dashboard - Settings</h4>
+			    <p class="card-text">/ <i class="fas fa-home text-primary fa-fw"></i> / dash / settings</p>
+			
+			  </div>
+			
+			</div>
+			
+			<div class="card mb-space-1">
+
+			  <div class="card-body">
+			
+				<form method="POST">
+				      
+				      	<div class="modal-body">
+				        	
+				        	<div class="md-form">
+
+								Paypal Email: <input type="text" name="paypal_email" class="form-control" value="<?php echo $access['email_paypal']; ?>"> 
+											
+							</div>
+							
+							<div class="md-form">
+
+								Paypal Message: <input type="text" name="paypal_message" class="form-control" value="<?php echo $access['message_paypal']; ?>"> 
+											
+							</div>
+							
+							<div class="md-form">
+
+								Email: <input type="text" name="email" class="form-control" value="<?php echo $access['email']; ?>"> 
+											
+							</div>
+							
+							<div class="md-form">
+
+								Localisation: <input type="text" name="street" class="form-control" value="<?php echo $access['street']; ?>"> 
+											
+							</div>
+							
+							<div class="md-form">
+
+								Titre: <input type="text" name="title" class="form-control" value="<?php echo $access['title']; ?>"> 
+											
+							</div>
+				        
+				     	</div>
+				      
+				      	<div class="modal-footer">
+				      	
+				        	<button type="submit" class="btn btn-primary">METTRE A JOUR</button>
+				        	
+				      	</div>
+				      
+				 </form>
+			
+			  </div>
+			
+			</div>
+			
+			<div class="mb-empty"></div>
+			
+			<?= getTheme('/include/dash/footer', true, 'view'); ?>
+		
+		</div>
+		
+		
+		
+	</body>
+</html>

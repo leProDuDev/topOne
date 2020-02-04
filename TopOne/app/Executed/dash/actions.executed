@@ -1,0 +1,109 @@
+<?php
+
+if(!empty($_POST)) {
+	
+	$ActionsManager = new ActionsManager(new SqlManager());
+	
+	if($_POST["type"] == "add") {
+		
+		if(empty($_POST["image"]) && empty($_POST["message"])) {
+			
+			return;
+			
+		}
+		
+		$connect = $ActionsManager->registerActions(htmlentities($_POST["image"]), htmlentities($_POST["message"]));
+		
+		if(!empty($connect)) {
+			
+			success_add();
+			echo '<meta http-equiv="refresh" content="3">';
+			
+		} else {
+			
+			error_add();
+			
+		}
+		
+	}
+	
+	if($_POST["type"] == "remove") {
+		
+		$connect = $ActionsManager->removeActions(htmlentities($_POST["id"]));
+		
+		if($connect) {
+			
+			success_remove();
+			echo '<meta http-equiv="refresh" content="3">';
+			
+		} else {
+			
+			error_remove();
+			
+		}
+		
+	}
+	
+}
+
+function error_remove() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Impossible de supprimer cette actions'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_add() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Actions créer !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+function success_remove() {
+	
+	?>
+	
+	<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Actions supprimer !'
+				  
+			})
+	
+		</script>
+	
+	<?php
+	
+}
+
+?>
