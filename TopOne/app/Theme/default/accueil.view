@@ -1,53 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>EcoWorld - Tous uni pour l'avenir de demain</title>
-<link rel="stylesheet" type="text/css" href="../bootstrap.css">
-<link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-<body>
-	<?= getTheme('/include/contain', true, 'view'); ?>
-	<nav class="navbar navbar-expand-lg navbar-dark color sub-line">
 
-      	<a class="navbar-brand d-lg-none up" href="#">Navbar</a>
-    
-      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-        	<span class="navbar-toggler-icon"></span>
-      	</button>
-    
-      <div class="container collapse navbar-collapse justify-content-between" id="navbarToggle">
-    
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active up" href="#">ACCUEIL <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link up" href="#">NOS ACTIONS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link up" href="#">NOS CONVICTION</a>
-          </li>
-        </ul>
-        
-        
-        <a class="navbar-brand d-none d-lg-block up" href="#">ECOWORLD</a>
-        
-        
-        
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link up" href="#">DONNATIONS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link up" href="#">CONTACT</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link up" href="#">DASHBORD</a>
-          </li>
-        </ul>
-        
-      </div>
-    </nav>
+<head>
+
+	<title>EcoWorld - Tous uni pour l'avenir de demain</title>
+	<?= getTheme('/include/dependency', true, 'view'); ?>
+	
+</head>
+
+<body>
+
+	<?= getTheme('/include/navbar', true, 'view'); ?>
     
     <div class="bg-first sub-line">
     
@@ -55,9 +18,7 @@
     		
         		<h2 class="up text-center bg-title">Bienvenue sur ECOWORLD</h2>
         		<h2 class="up text-center bg-title">Tous unis pour l'avenir de demain</h2>
-        		
-        		
-    		
+
     		</div>
     
     </div>
@@ -68,13 +29,13 @@
     
     	<div class="col-10 box">
     		
-    			<div class="card-body">
+    		<div class="card-body">
     			
-    				<h5>Newsletter #1</h5>
+    			<h5>Newsletter #1</h5>
     				
-    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
+    			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
     			
-    			</div>
+    		</div>
     		
     	</div>
     	
@@ -82,13 +43,13 @@
     
     	<div class="col-10 box">
     		
-    			<div class="card-body">
+    		<div class="card-body">
     			
-    				<h5>Newsletter #2</h5>
+    			<h5>Newsletter #2</h5>
     				
-    				<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
+    			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere leo eu metus lobortis vestibulum. Nullam justo enim, pellentesque sed consequat et, efficitur eget mauris. Donec vitae efficitur justo. Praesent est neque, tempor ut lectus sed, aliquam laoreet massa. Morbi lacinia eget est quis tincidunt. Nullam nec dui ut elit facilisis molestie. Phasellus mattis, nibh sit amet facilisis semper, velit tellus imperdiet nisl, eu pharetra augue odio in libero. Mauris vel lectus eros. Nullam eu feugiat libero. Nulla ut sem ut tellus commodo aliquam a quis felis. Suspendisse ultrices orci quis euismod porta. Aenean eu consectetur augue.</p>
     			
-    			</div>
+    		</div>
     		
     	</div>
     	
@@ -96,15 +57,8 @@
     
     </div>
     
-    <div class="footer">
-    	
-    	<div class="footer-content text-center up">
-    	
-    		&copy; Copyright 2020, EcoWorld
-    	
-    	</div>
-    	
-    </div>
+    <?= getTheme('/include/footer', true, 'view'); ?>
 	
 </body>
+
 </html>
