@@ -38,6 +38,15 @@
 	
 }
 
+.bg-content-small {
+	
+	color: white;
+	text-shadow: 0.1em 0.1em #333;
+	padding-top: 3%;
+	padding-bottom: 4%;
+	
+}
+
 .bg-title {
 	
 	font-size: 3rem;
@@ -86,5 +95,11 @@
 	
 	padding-top: 10px;
 	padding-bottom: 10px;
+	
+}
+
+.btn-default {
+	
+	background-color: #219186!important;
 	
 }
