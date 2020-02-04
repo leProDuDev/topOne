@@ -3,7 +3,7 @@
 
 <head>
 
-<title>EcoWorld - Faite un dons</title>
+	<title>EcoWorld - Faite un dons</title>
 	<?= getTheme('/include/dependency', true, 'view'); ?>
 	
 </head>
@@ -24,7 +24,7 @@
 
 	<div class="container">
 
-		<div class="col-10 mx-auto center-login">
+		<div class="col-11 mx-auto center-login">
 
 			<div style="padding-top: 3%; padding-bottom: 5%;">
 

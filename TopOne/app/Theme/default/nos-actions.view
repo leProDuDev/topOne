@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>EcoWorld - Faite un dons</title>
+	<?= getTheme('/include/dependency', true, 'view'); ?>
+	
+</head>
+
+<body>
+
+	<?= getTheme('/include/navbar', true, 'view'); ?>
+    
+    <div class="bg-first sub-line">
+
+		<div class="bg-content-small">
+
+			<h2 class="up text-center bg-title">NOS ACTIONS</h2>
+
+		</div>
+
+	</div>
+
+	<div class="container">
+	
+		<div class="mx-auto spacer-1">
+		
+			<div class="row">
+      
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-3.jpg');"></div>
+                
+                	<div class="card-body text-center">
+                	
+                		Lutter contre les déchets plastique.
+                	
+                	</div>
+                	
+                </div>
+                
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-2.jpg');"></div>
+                
+                	<div class="card-body text-center">
+                	
+                		Lutter contre le réchauffement climatique.
+                	
+                	</div>
+                	
+                </div>
+                
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-1.jpg');"></div>
+                
+                	<div class="card-body text-center">
+                	
+                		Protéger les forêts.
+                	
+                	</div>
+                
+                </div>
+                
+                <div class="spacer-1"></div>
+        
+      		</div>
+		
+		</div>
+      
+    </div>
+    
+    <?= getTheme('/include/footer', true, 'view'); ?>
+	
+</body>
+
+</html>

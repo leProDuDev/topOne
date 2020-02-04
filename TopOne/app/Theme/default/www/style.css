@@ -83,6 +83,13 @@
 	
 }
 
+.sub-box-two {
+	
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+
 .footer {
 	
 	width: 100%;
@@ -107,5 +114,21 @@
 .btn-default:hover {
 	
 	background-color: #2fd0c0!important;
+	
+}
+
+.center-box {
+	
+	width: 30%;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	
+}
+
+.img-box {
+	
+	 padding-bottom: 50%;
+	 background-repeat: no-repeat;
+	 background-position: center center;
 	
 }
