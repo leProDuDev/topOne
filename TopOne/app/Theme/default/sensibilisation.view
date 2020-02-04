@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>EcoWorld - Faite un dons</title>
+	<title>EcoWorld - Sensibilisation</title>
 	<?= getTheme('/include/dependency', true, 'view'); ?>
 	
 </head>

@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>EcoWorld - Faite un dons</title>
+	<title>EcoWorld - Nos actions</title>
 	<?= getTheme('/include/dependency', true, 'view'); ?>
 	
 </head>
@@ -24,7 +24,7 @@
 
 	<div class="container">
 	
-		<div class="mx-auto spacer-1">
+		<div class="mx-auto" style="margin-top: 5%;">
 		
 			<div class="row">
       
@@ -32,7 +32,7 @@
                 
                 	<div class="img-box" style="background: url('../img/card/card-3.jpg');"></div>
                 
-                	<div class="card-body text-center">
+                	<div class="card-body text-center up">
                 	
                 		Lutter contre les déchets plastique.
                 	
@@ -44,7 +44,7 @@
                 
                 	<div class="img-box" style="background: url('../img/card/card-2.jpg');"></div>
                 
-                	<div class="card-body text-center">
+                	<div class="card-body text-center up">
                 	
                 		Lutter contre le réchauffement climatique.
                 	
@@ -56,7 +56,7 @@
                 
                 	<div class="img-box" style="background: url('../img/card/card-1.jpg');"></div>
                 
-                	<div class="card-body text-center">
+                	<div class="card-body text-center up">
                 	
                 		Protéger les forêts.
                 	
@@ -64,11 +64,48 @@
                 
                 </div>
                 
-                <div class="spacer-1"></div>
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-4.jpg');"></div>
+                
+                	<div class="card-body text-center up">
+                	
+                		Lutter contre le gaspillage alimentaire.
+                	
+                	</div>
+                	
+                </div>
+                
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-5.jpg');"></div>
+                
+                	<div class="card-body text-center up">
+                	
+                		Lutter contre le braconnage.
+                	
+                	</div>
+                	
+                </div>
+                
+                <div class="center-box card">
+                
+                	<div class="img-box" style="background: url('../img/card/card-6.jpg');"></div>
+                
+                	<div class="card-body text-center up">
+                	
+                		Lutter contre la pollution.
+                	
+                	</div>
+                
+                </div>
         
       		</div>
 		
 		</div>
+		
+		                
+       	<div class="spacer-2"></div>
       
     </div>
     

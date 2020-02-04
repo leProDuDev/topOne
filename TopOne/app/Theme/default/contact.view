@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>EcoWorld - Tous uni pour l'avenir de demain</title>
+	<title>EcoWorld - Contactez-nous</title>
 	<?= getTheme('/include/dependency', true, 'view'); ?>
 
 </head>
