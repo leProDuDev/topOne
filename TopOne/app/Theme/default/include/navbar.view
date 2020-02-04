@@ -32,7 +32,7 @@
 		
 			<li class="nav-item"><a class="nav-link up" href="../dons">DONATIONS</a></li>
 			<li class="nav-item"><a class="nav-link up" href="../contact">CONTACT</a></li>
-			<li class="nav-item"><a class="nav-link up" href="#">DASHBORD</a></li>
+			<li class="nav-item"><a class="nav-link up" href="../dash/index">DASHBORD</a></li>
 			
 		</ul>
 
