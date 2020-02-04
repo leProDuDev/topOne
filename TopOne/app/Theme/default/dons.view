@@ -16,7 +16,7 @@
 
 		<div class="bg-content-small">
 
-			<h2 class="up text-center bg-title">DONNATIONS</h2>
+			<h2 class="up text-center bg-title">DONATIONS</h2>
 
 		</div>
 
@@ -44,7 +44,7 @@
 							</center>
 
 							<a href="#"
-								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Effectué
+								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Effectuer
 								le don</a>
 
 						</div>

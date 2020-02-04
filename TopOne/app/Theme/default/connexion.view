@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>EcoWorld - Connectez-vous</title>
+	<?= getTheme('/include/dependency', true, 'view'); ?>
+	
+</head>
+
+<body>
+
+	<?= getTheme('/include/navbar', true, 'view'); ?>
+    
+    <div class="bg-first sub-line">
+
+		<div class="bg-content-small">
+
+			<h2 class="up text-center bg-title">CONNEXION</h2>
+
+		</div>
+
+	</div>
+
+	<div class="container col-4">
+	
+		<div class="mx-auto" style="margin-top: 5%;">
+		
+			<form method="POST" style="padding-top: 13%; padding-bottom: 30%;">
+
+				<div class="card text-center">
+
+					<div class="card-body">
+
+						<div class="md-form">
+
+							<center>
+							
+								<h2 class="up">Connexion</h2>
+								
+								<div class="spacer-1"></div>
+
+								<input type="text" class="form-control" placeholder="Pseudo"
+									style="width: 50%">
+									
+								<input type="password" class="form-control" placeholder="Mot de passe"
+									style="width: 50%">
+									
+								<div class="spacer-1"></div>
+
+							</center>
+
+							<a href="#"
+								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light up">connexion</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</form>
+		
+		</div>
+		
+		                
+       	<div class="spacer-2"></div>
+      
+    </div>
+    
+    <?= getTheme('/include/footer', true, 'view'); ?>
+	
+</body>
+
+</html>
