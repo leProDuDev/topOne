@@ -44,7 +44,7 @@
 							</center>
 
 							<a href="#"
-								class="btn btn-primary btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Effectué
+								class="btn btn-default btn-lg mb-2 mr-2 ml-2 waves-effect waves-light">Effectué
 								le don</a>
 
 						</div>
@@ -58,10 +58,8 @@
 			<div class="card text-center" style="margin-bottom: 20%;">
 			
 				<div class="card-body">
-				
-					
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt enim vel dolor egestas, eget scelerisque neque eleifend. Aenean in ante quam. Donec luctus pretium ante ut malesuada.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt enim vel dolor egestas, eget scelerisque neque eleifend. Aenean in ante quam. Donec luctus pretium ante ut malesuada.
 				
 				</div>
 			
