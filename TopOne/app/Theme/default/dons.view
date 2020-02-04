@@ -37,8 +37,8 @@
 							<center>
 
 								<p style="font-size: x-large; text-transform: uppercase;">Montant
-									du don</p>
-								<input type="number" class="form-control" value="10"
+									du don <br> en EUROS</p>
+								<input type="number" class="form-control" value="5"
 									style="width: 30%">
 
 							</center>
