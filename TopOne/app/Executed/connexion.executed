@@ -26,7 +26,15 @@ if(!empty($_POST)) {
 					
 					success();
 					
-					header('Refresh: 3; URL=/dash/index');
+					?>
+					
+					<script>
+
+					window.location.href = "../dash/index";
+
+					</script>
+					
+					<?php
 					
 				} else {
 					
