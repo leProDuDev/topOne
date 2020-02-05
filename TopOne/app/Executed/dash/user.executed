@@ -6,7 +6,7 @@ if(!empty($_POST)) {
 	
 	if($_POST["type"] == "add") {
 		
-		if(empty($UserManager->existUser(htmlentities($_POST["username"])))) {
+		if(!$UserManager->existUser(htmlentities($_POST["username"]))) {
 			
 			$connect = $UserManager->registerUser(htmlentities($_POST["username"]), htmlentities($_POST["password"]));
 			
@@ -31,7 +31,7 @@ if(!empty($_POST)) {
 	
 	if($_POST["type"] == "remove") {
 		
-		if(!empty($UserManager->existUser(htmlentities($_POST["username"])))) {
+		if($UserManager->existUser(htmlentities($_POST["username"]))) {
 			
 			$connect = $UserManager->removeUser(htmlentities($_POST["id"]));
 			
