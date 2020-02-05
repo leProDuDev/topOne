@@ -84,6 +84,7 @@ class LeftingDev {
 			
 			$this->error(404);
 			exit();
+			
 		}
 	}
 	
@@ -93,7 +94,7 @@ class LeftingDev {
 		
 		foreach($files as $value){
 			
-			$path = realpath($dir."\\".$value);
+			$path = realpath($dir."//".$value);
 			
 			if(!is_dir($path)) {
 				
