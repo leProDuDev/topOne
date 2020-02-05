@@ -1,5 +1,42 @@
 <?php
 
+error_reporting(0);
 
+if(!empty($_POST)) {
+    
+    if (empty($_POST["email"]) || empty($_POST["message"])) {
+        
+        return;
+        
+    }
+    
+    $SettingsManager = new SettingsManager(new SqlManager());
+    
+    $to = $SettingsManager->getAllSettings()[0]["email"];
+    $message = htmlentities($_POST["message"]);
+    $headers = 'From: '.htmlentities($_POST["email"]). "\r\n" .
+        'Reply-To: '.htmlentities($_POST["email"]). "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+    
+    mail($to, "", $message, $headers);
+
+?>
+	
+		<script type="text/javascript">
+
+			Swal.fire({
+				
+				icon: 'success',
+				title: 'Bon Travail',
+				text: 'Message envoyé !'
+				  
+			})
+	
+		</script>
+	
+<?php
+    
+    
+}
 
 ?>
